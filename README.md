@@ -9,6 +9,11 @@ Para instalar el proyecto debe de instalarlo con los siguientes comandos dentro 
 ```bash
   npm install
 ```
+Para ejecutar el proyecto 
+ 
+```bash
+  npm start
+```
 
 
 ## Requisitos
