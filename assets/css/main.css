@@ -1,0 +1,50 @@
+ .card-info {
+   min-height: 100vh;
+   /* background: rgb(76, 76, 236); */
+   background: rgb(33, 39, 48);
+ }
+
+ .card-map {
+   min-height: 80vh;
+   background: rgb(255, 255, 255);
+ }
+
+ #showingMap {
+   min-height: 100vh;
+ }
+
+ .card {
+   border-radius: 14px;
+ }
+
+
+ .vh-50 {
+   min-height: 50vh;
+ }
+
+ #textInformation>h1 {
+   color: #fff;
+   font-weight: 900;
+ }
+
+ #textInformation > p {
+  color: #fff;
+  font-weight: 700;
+ }
+
+ #textInformation>hr {
+   background: #fff;
+ }
+
+
+ /* Custom */
+ .btnCustom {
+   background: rgb(57, 84, 218);
+   color: #fff;
+   border-radius: 30px;
+ } 
+ 
+
+ #map { 
+  min-height: 100vh;
+  }
