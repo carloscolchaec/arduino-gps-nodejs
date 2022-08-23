@@ -1,8 +1,8 @@
 const mysql = require("mysql");
 
 
-const userDB = "gpsarduinoprt.000webhostapp.com";
-const hostDB = "gps_arduino";
+const userDB = "gps_arduino";
+const hostDB = "gpsarduinoprt.000webhostapp.com";
 const bdDB = "id19460382_gps_arduino_db";
 const passwDB = "0p&Co-tKQ=QT3e(V";
 
