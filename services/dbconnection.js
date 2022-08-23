@@ -1,13 +1,12 @@
-require("dotenv").config();
-
 const mysql = require("mysql");
 
 
-const userDB = process.env.USER_DB;
-const hostDB = process.env.HOST_DB;
-const bdDB = process.env.DATABASE_DB;
-const passwDB = process.env.PASSWORD_DB;
-const portDb = process.env.PORT_DB;
+const userDB = "root";
+const hostDB = "localhost";
+const bdDB = "walert_db";
+const passwDB = "";
+
+
 
 // Connection DB
 const conn = mysql.createConnection({
