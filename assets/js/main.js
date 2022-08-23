@@ -1,3 +1,6 @@
+Push.Permission.request();
+
+
 console.warn(`
 _______ ______ _______      _______ _______ _______ _______ _______
 |     __|   __ \     __|    |_     _|    ___|     __|_     _|     __|
@@ -55,6 +58,16 @@ socket.on("chat message", function (msg) {
     html: "<strong>Espera un momento mientras establecemos conexión.</strong>",
     showCancelButton: false,
     showConfirmButton: false
+  });
+
+  Push.create('ALERTA DETECTADA!', {
+    body: 'HEMOS DETECTADO UN REPORTE DE ALERTA.',
+    timeout: 8000,               // Timeout before notification closes automatically.
+    vibrate: [100, 100, 100],    // An array of vibration pulses for mobile devices.
+    onClick: function() {
+        // Callback for when the notification is clicked. 
+        console.log(this);
+    }  
   });
 
   document.getElementById("listAlerts").innerHTML += `

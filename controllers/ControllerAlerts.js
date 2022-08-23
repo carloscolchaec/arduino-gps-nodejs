@@ -29,13 +29,13 @@ exports.getLastRecord = (req, res, next) => {
 };
 
 exports.createNewCoord = (req, res, next) => {
+  let { long, lat, time } = req.query;
   const dataCoordsNew = {
-    long: "-2.1362184",
-    lat: "-79.8974804",
-    time: "2022-08-12 7:37:18 am",
+    long: long,
+    lat: lat,
+    time: time,
   };
 
-  console.log(dataCoordsNew.lat)
   conn.query(
     `INSERT INTO tb_alerts (long_alert, lat_alert, time_alert) 
     VALUES ('${dataCoordsNew.long}','${dataCoordsNew.lat}','${dataCoordsNew.time}')`,
