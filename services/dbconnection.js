@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 
 
-const userDB = "4163335_gpsdb";
-const hostDB = "185.176.43.109";
-const bdDB = "4163335_gpsdb";
-const passwDB = "gpsdb123";
+const userDB = "sql5514775";
+const bdDB = "sql5514775";
+const passwDB = "M7prz4qVvK";
+const hostDB = "sql5.freesqldatabase.com";
 
 
 
@@ -13,7 +13,8 @@ const conn = mysql.createConnection({
     host: hostDB,
     user: userDB,
     password: passwDB,
-    database: bdDB
+    database: bdDB,
+    connectTimeout: 300
 });
 
 conn.connect();
