@@ -122,7 +122,7 @@ app.get('/comprobar', function(request, response) {
 
 
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 5000, () => {
   console.log("listening on *:3000");
 });
 
