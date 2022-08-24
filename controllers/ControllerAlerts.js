@@ -1,6 +1,8 @@
 const AppError = require("../utils/appError");
 const conn = require("../services/dbconnection");
 
+var moment = require('moment');
+
 const socketEmit = require("../server.js");
 
 exports.getAllAlerts = (req, res, next) => {
@@ -29,11 +31,12 @@ exports.getLastRecord = (req, res, next) => {
 };
 
 exports.createNewCoord = (req, res, next) => {
-  let { long, lat, time } = req.query;
+  let { long, lat } = req.query;
+  var now = moment().format("YYYY-MM-DD HH:mm:ss");
   const dataCoordsNew = {
     long: long,
     lat: lat,
-    time: time,
+    time: now,
   };
 
   conn.query(
@@ -44,6 +47,7 @@ exports.createNewCoord = (req, res, next) => {
       res.status(200).json({
         status: "success",
         created: "OK",
+        data: dataCoordsNew,
         report: "GPS ACTIVE AND SAVE",
       });
     }
