@@ -2,7 +2,7 @@ const mysql = require("mysql");
 
 
 const userDB = "4163335_gpsdb";
-const hostDB = "fdb32.awardspace.net";
+const hostDB = "185.176.43.109";
 const bdDB = "4163335_gpsdb";
 const passwDB = "gpsdb123";
 
