@@ -115,7 +115,7 @@ socket.on("chat message", function (msg) {
 });
 
 axios
-  .get("https://gps-arduino.herokuapp.com:5000/alertas")
+  .get("https://gps-arduino.herokuapp.com/alertas")
   .then(function (response) {
     let listAlerts = response.data.data;
 
