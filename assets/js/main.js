@@ -22,7 +22,7 @@ var osm = L.tileLayer(
 ).addTo(map_init);
 
 axios
-  .get("http://gps-arduino.herokuapp.com/ultima-alerta")
+  .get("https://gps-arduino.herokuapp.com/ultima-alerta")
   .then(function (response) {
     let dataLastGPS = response.data.data;
 
@@ -90,7 +90,7 @@ socket.on("chat message", function (msg) {
 });
 
 axios
-  .get("http://gps-arduino.herokuapp.com/alertas")
+  .get("https://gps-arduino.herokuapp.com/alertas")
   .then(function (response) {
     let listAlerts = response.data.data;
 
