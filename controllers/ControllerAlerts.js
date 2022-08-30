@@ -6,7 +6,7 @@ var moment = require('moment');
 const socketEmit = require("../server.js");
 
 exports.getAllAlerts = (req, res, next) => {
-  conn.query("SELECT * FROM tb_alerts", function (err, data, fields) {
+  conn.query("SELECT * FROM tb_alerts ORDER BY id_alert DESC LIMIT 3", function (err, data, fields) {
     if (err) return next(new AppError(err));
     res.status(200).json({
       status: "success",
@@ -54,4 +54,22 @@ exports.createNewCoord = (req, res, next) => {
   );
 
   socketEmit.io.emit("chat message", dataCoordsNew);
+};
+
+
+
+exports.createNewAccountAdmin = (req, res, next) => {
+  let { email, password } = req.query;
+
+  conn.query(
+    `INSERT INTO tb_accounts (email_account, password_account) VALUES ('${email}','${password}')`,
+    function (err, data, fields) {
+      if (err) return next(new AppError(err, 500));
+      res.status(200).json({
+        status: "success",
+        created: "OK",
+      });
+    }
+  );
+
 };

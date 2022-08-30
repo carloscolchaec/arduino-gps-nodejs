@@ -11,7 +11,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Hello, world!</title>
     <link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css">
-    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="stylesheet" href="assets/css/crear-cliente.css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class="container containerCustom">
             <div class="card">
                 <div class="containerCustomText py-2">
-                    <div>INGRESAR</div>
+                    <div>Crear Cliente</div>
                 </div>
                 <div class="card-body">
                     <div class="alert alert-danger" id="alert" role="alert">
@@ -36,7 +36,11 @@
                           <label for="exampleInputPassword1">Contraseña</label>
                           <input type="password" name="password" class="form-control" id="inPassword">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                        <div class="row">
+                            <div class="col-12">
+                                <button id="btnCreateAcoount" type="submit" class="btn btn-primary btn-block">Crear Cuenta</button>
+                            </div>
+                        </div>
                       </form>
                 </div>
               </div>
@@ -60,7 +64,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
     <script src="../node_modules/socket.io/client-dist/socket.io.js"></script>
     <script src="../node_modules/leaflet/dist/leaflet.js"></script>
-    <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/crear-cliente.js"></script>
 </body>
 
 </html>
