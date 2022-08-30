@@ -1,15 +1,15 @@
 const mysql = require("mysql");
 
 
-// const userDB = "sql5514775";
-// const bdDB = "sql5514775";
-// const passwDB = "M7prz4qVvK";
-// const hostDB = "sql5.freesqldatabase.com";
+const userDB = "sql5514775";
+const bdDB = "sql5514775";
+const passwDB = "M7prz4qVvK";
+const hostDB = "sql5.freesqldatabase.com";
 
-const userDB = "root";
-const bdDB = "walert_db";
-const passwDB = "";
-const hostDB = "localhost";
+// const userDB = "root";
+// const bdDB = "walert_db";
+// const passwDB = "";
+// const hostDB = "localhost";
 
 
 
