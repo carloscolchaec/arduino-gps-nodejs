@@ -27,7 +27,7 @@ _______ ______ _______      _______ _______ _______ _______ _______
 `);
 
 axios
-  .get("https://${URL_API}/ultima-alerta")
+  .get(`https://${URL_API}/ultima-alerta`)
   .then(function (response) {
     let dataLastGPS = response.data.data;
 
